@@ -13,6 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/ashok', function () {
     return view('welcome');
 });
+
+// Route::get('/hello', function () {
+//     return view('firstpage');
+// });
+
+Route::get('/hello','App\Http\Controllers\myController@index');
+
+Route::get('/enemi', function () {
+    return view('aaphai');
+});
+
