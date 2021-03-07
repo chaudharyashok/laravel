@@ -23,7 +23,7 @@ Route::get('/ashok', function () {
 
 Route::get('/hello','App\Http\Controllers\myController@index');
 
-Route::get('/enemi', function () {
-    return view('aaphai');
-});
 
+
+//to show addproductform
+Route::get('/addproduct','App\Http\Controllers\myController@showproductform');
