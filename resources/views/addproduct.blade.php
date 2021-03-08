@@ -11,7 +11,16 @@
 	<div class="container">
 		<h1 class="mb-3"> Add Product Form</h1>
 
-		<form method="post" enctype="multipart/form-data" action="" >
+		@if(Session::has('msg'))
+
+		<div class="alert alert-success">
+			{{Session::get('msg')}}
+
+		</div>
+		@endif
+
+		<form method="post" enctype="multipart/form-data" action="{{route('storeproduct')}}" >
+			@csrf
 
 			<div class="col-md-6">
 				<label for="productName">Productname</label>
