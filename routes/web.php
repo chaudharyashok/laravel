@@ -29,3 +29,6 @@ Route::get('/hello','App\Http\Controllers\myController@index');
 Route::get('/addproduct','App\Http\Controllers\myController@showproductform');
 //to insert aproduct
 Route::post('/storeproduct','App\Http\Controllers\myController@store')->name('storeproduct');
+
+//showproduct/ showdata
+Route::get('/showproduct','App\Http\Controllers\myController@show')->name('showproduct');
