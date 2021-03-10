@@ -32,3 +32,6 @@ Route::post('/storeproduct','App\Http\Controllers\myController@store')->name('st
 
 //showproduct/ showdata
 Route::get('/showproduct','App\Http\Controllers\myController@show')->name('showproduct');
+
+//to show data hompage
+Route::get('/homepage','App\Http\Controllers\myController@homepage')->name('homepage');
