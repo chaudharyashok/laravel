@@ -82,7 +82,8 @@ class myController extends Controller
      */
     public function edit($id)
     {
-        //
+        $product=product::find($id);
+        return view('editproduct',compact('product'));
     }
 
     /**
@@ -103,8 +104,16 @@ class myController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request,$id)
     {
-        //
+        $product=product::find($id);
+        // to remove image from database columun
+        if($product->product_name){
+            //to remove image from folder
+            unlink('uploads/products/'.$product->product_image);
+        }
+        $product->delete();
+        $request->session()->flash('msg','Product has been deleted successfully');
+        return redirect()->back();
     }
 }

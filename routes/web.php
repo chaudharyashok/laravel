@@ -35,3 +35,7 @@ Route::get('/showproduct','App\Http\Controllers\myController@show')->name('showp
 
 //to show data hompage
 Route::get('/homepage','App\Http\Controllers\myController@homepage')->name('homepage');
+//to delete product data
+Route::get('/deletedata/{id}','App\Http\Controllers\mycontroller@destroy')->name('delete');
+//to edit product 
+Route::get('//editdat/{id}','App\Http\Controllers\myController@edit')->name('editproduct');
